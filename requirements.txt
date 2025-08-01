@@ -1,4 +1,3 @@
 streamlit
-os
 pandas
-sqlite3
+pillow
