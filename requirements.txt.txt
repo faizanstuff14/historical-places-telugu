@@ -1,4 +1,0 @@
-streamlit
-os
-pandas
-sqlite3
