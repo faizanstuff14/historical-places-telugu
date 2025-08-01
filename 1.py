@@ -201,9 +201,9 @@ def admin_dashboard():
 
     st.subheader("All User Submissions")
     for _, row in merged_df.sort_values(by='timestamp', ascending=False).iterrows():
-        st.markdown(f"*User:* {row['user_name']} ({row['user_email']})")
-        st.markdown(f"*Timestamp:* {row['timestamp']}")
-        st.markdown(f"*Description (Telugu):* {row['description_te']}")
+        st.markdown(f"**User:** {row['user_name']} ({row['user_email']})")
+        st.markdown(f"**Timestamp:** {row['timestamp']}")
+        st.markdown(f"**Description (Telugu):** {row['description_te']}")
         if os.path.exists(row['image_path']):
             try:
                 img = Image.open(row['image_path'])
@@ -271,5 +271,5 @@ def main():
         if st.session_state.get('show_admin_login', False):
             admin_login_modal()
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     main()
